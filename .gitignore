@@ -1,0 +1,9 @@
+.vscode/settings.json
+app/styles/_digits.scss
+app/styles/_functions.scss
+app/styles/_globals.scss
+app/styles/_main.scss
+app/styles/_mixins.scss
+app/styles/_variables.scss
+app/styles/style.scss
+css/style.css.map

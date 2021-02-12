@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+html *,
+html *::after,
+html *::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bolder;
+  user-select: none;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  height: 80vh;
+  display: grid;
+  place-items: center;
+  background-color: black;
+  z-index: 1;
+}
+
+.container::before {
+  position: absolute;
+  content: '';
+  background-image: url(/doc/w2.jpg);
+  background-size: cover;
+  background-position: center center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.44;
+}
+
+.digit-box {
+  position: relative;
+  width: 250px;
+  height: 510px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  transform: skewX(-3deg);
+  background-color: transparent;
+}
+
+.box {
+  border-radius: 40%;
+  box-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7);
+}
+
+.box3,
+.box4,
+.box5,
+.box6 {
+  position: absolute;
+  width: 40px;
+  height: 210px;
+}
+
+.box3 {
+  top: 35px;
+  left: 0;
+}
+
+.box4 {
+  top: 35px;
+  right: 0;
+}
+
+.box5 {
+  bottom: 35px;
+  left: 0;
+}
+
+.box6 {
+  bottom: 35px;
+  right: 0;
+}
+
+.box0,
+.box1,
+.box2 {
+  width: 180px;
+  height: 40px;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #4ac29a, #bdfff3);
+  overflow: hidden;
+}
+/*# sourceMappingURL=style.css.map */

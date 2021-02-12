@@ -1,0 +1,50 @@
+{
+    "bubbles":[
+        {
+            "left": "-6%", "top": "42%", "opacity": "0.2", "size": "300px"
+        },
+        {
+            "left": "7%", "top": "3%", "opacity": "0.13", "size": "250px"
+        },
+        {
+            "left": "40%", "top": "55%", "opacity": "0.25", "size": "400px"
+        },
+        {
+            "left": "35%", "top": "52%", "opacity": "0.30", "size": "150px"
+        },
+        {
+            "left": "40%", "top": "18%", "opacity": "0.33", "size": "220px"
+        },
+        {
+            "left": "63%", "top": "15%", "opacity": "0.37", "size": "170px"
+        },
+        {
+            "left": "79%", "top": "80%", "opacity": "0.24", "size": "280px"
+        },
+        {
+            "left": "87%", "top": "35%", "opacity": "0.35", "size": "130px"
+        },
+        {
+            "left": "12%", "top": "78%", "opacity": "0.27", "size": "160px"
+        },
+        {
+            "left": "80%", "top": "50%", "opacity": "0.31", "size": "100px"
+        },
+        {
+            "left": "49%", "top": "-34%", "opacity": "0.39", "size": "420px"
+        },
+        {
+            "left": "89%", "top": "4%", "opacity": "0.45", "size": "280px"
+        },
+        {
+            "left": "49%", "top": "50%", "opacity": "0.13", "size": "90px"
+        },
+        {
+            "left": "30%", "top": "25%", "opacity": "0.2", "size": "60px"
+        },
+        {
+            "left": "18%", "top": "60%", "opacity": "0.3", "size": "110px"
+        }
+
+    ]
+}
