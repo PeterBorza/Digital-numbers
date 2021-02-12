@@ -43,22 +43,23 @@ const renderDigits = () => {
 
 const renderBits = (_, i) => {
 	const box = div(`box${i}`);
-	box.classList.add('box');
 	box.style.backgroundColor = 'rgba(193, 21, 21, 0.76)';
-
+	box.style.boxShadow = '2px 2px 10px rgba(255, 0, 0, 0.7)';
+	box.style.borderRadius = '40%';
 	return box;
 };
 
-// *********************************************************8
+// *********************************************************
 //  LISTENING TO KEYDOWN EVENTS
 const getNumbers = stripes => {
 	const counter = 7;
 	const stripeArray = new Array(counter).fill().map((_, i) => i);
 	window.addEventListener('keydown', e => {
 		let key = e.key;
-		stripeArray.forEach(
-			n => (stripes[n].style.backgroundColor = 'rgba(193, 21, 21, 0.76)')
-		);
+		stripeArray.forEach(n => {
+			stripes[n].style.backgroundColor = 'rgba(193, 21, 21, 0.76)';
+			stripes[n].style.boxShadow = '2px 2px 10px rgba(255, 0, 0, 0.7)';
+		});
 		switch (key) {
 			case '0':
 				const num0 = stripeArray.filter(n => n === 1);
@@ -100,6 +101,14 @@ const getNumbers = stripes => {
 			case '7':
 				const num7 = stripeArray.filter(n => n > 0 && n < 6 && n !== 4);
 				setBlackBg(num7, stripes);
+				break;
+			case '8':
+				stripeArray.forEach(n => {
+					stripes[n].style.backgroundColor =
+						'rgba(193, 21, 21, 0.76)';
+					stripes[n].style.boxShadow =
+						'2px 2px 10px rgba(255, 0, 0, 0.7)';
+				});
 				break;
 
 			case '9':

@@ -32,8 +32,9 @@ main {
   height: 80vh;
   display: grid;
   place-items: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.555);
   z-index: 1;
+  overflow: hidden;
 }
 
 .container::before {
@@ -44,15 +45,27 @@ main {
   background-position: center center;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 105%;
   height: 100%;
-  opacity: 0.44;
+  opacity: 0.2;
+  filter: blur(1px) grayscale(50%);
+  transform: translateX(-5%);
+  animation: hoverOver 12s linear infinite alternate-reverse;
+}
+
+@keyframes hoverOver {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
 }
 
 .digit-box {
   position: relative;
   width: 250px;
-  height: 510px;
+  height: 500px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,9 +74,26 @@ main {
   background-color: transparent;
 }
 
-.box {
-  border-radius: 40%;
-  box-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7);
+.digit-box::after {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.623);
+  bottom: 0;
+  right: -20%;
+  filter: blur(3px);
+  animation: blink 500ms ease-in-out infinite alternate-reverse;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .box3,
@@ -72,7 +102,7 @@ main {
 .box6 {
   position: absolute;
   width: 40px;
-  height: 210px;
+  height: 200px;
 }
 
 .box3 {
