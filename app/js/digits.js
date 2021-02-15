@@ -22,6 +22,12 @@ const setBlackbg2 = (arr, stripes) => {
 	stripes[arr].style.backgroundColor = 'transparent';
 	stripes[arr].style.boxShadow = 'none';
 };
+const setRedBg = (arr, stripes) => {
+	arr.forEach(stripe => {
+		stripes[stripe].style.backgroundColor = 'rgba(193, 21, 21, 0.76)';
+		stripes[stripe].style.boxShadow = '2px 2px 10px rgba(255, 0, 0, 0.7)';
+	});
+};
 
 // *************************************************************
 // THE MAIN FUNCTION
@@ -56,10 +62,7 @@ const getNumbers = stripes => {
 	const stripeArray = new Array(counter).fill().map((_, i) => i);
 	window.addEventListener('keydown', e => {
 		let key = e.key;
-		stripeArray.forEach(n => {
-			stripes[n].style.backgroundColor = 'rgba(193, 21, 21, 0.76)';
-			stripes[n].style.boxShadow = '2px 2px 10px rgba(255, 0, 0, 0.7)';
-		});
+		setRedBg(stripeArray, stripes);
 		switch (key) {
 			case '0':
 				const num0 = stripeArray.filter(n => n === 1);
@@ -103,12 +106,7 @@ const getNumbers = stripes => {
 				setBlackBg(num7, stripes);
 				break;
 			case '8':
-				stripeArray.forEach(n => {
-					stripes[n].style.backgroundColor =
-						'rgba(193, 21, 21, 0.76)';
-					stripes[n].style.boxShadow =
-						'2px 2px 10px rgba(255, 0, 0, 0.7)';
-				});
+				setRedBg(stripeArray, stripes);
 				break;
 
 			case '9':
